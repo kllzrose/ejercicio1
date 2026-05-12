@@ -1,0 +1,71 @@
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Threading.Tasks;
+
+
+namespace credito
+
+{
+
+    public class operaciones
+
+    {
+
+        public static void RealizarTransacciones() {
+
+
+            var cliente = new cliente();
+
+            cliente.Name = "Kiara";
+
+            cliente.Vender(100);
+
+            Console.WriteLine($"El cliente {cliente.Name} tiene {cliente.Credito} de credito.");
+
+
+            cliente.Name = "Juan";
+
+            cliente.Vender(500);
+
+            Console.WriteLine($"El cliente {cliente.Name} tiene {cliente.Credito} de credito.");
+
+        }
+
+    }
+
+}
+
+
+
+Punto de Entrada (Program):
+
+using credito;
+
+using System;
+
+
+namespace ClasesYObjetos {
+
+    internal class program {
+
+        static void Main(string[] args)
+
+        {
+
+            Console.WriteLine("Objetos y clases");
+
+
+            operaciones.RealizarTransacciones();
+
+        }
+
+    }
+
+}
+
